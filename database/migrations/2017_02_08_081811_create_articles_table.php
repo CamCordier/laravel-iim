@@ -17,7 +17,7 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->string('title', 255);
             $table->text('body');
-            $table->integer('user_id');
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
 
         });
