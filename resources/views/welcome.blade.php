@@ -69,11 +69,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                        <a href="{{ url('/user') }}">User</a>
+                        <a href="{{ url('/home') }}">Accueil</a>
+                        <a href="{{ url('/user') }}">Utilisateur</a>
+                        <a href="{{ url('/article') }}">Les articles</a>
                     @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
+                        <a href="{{ url('/login') }}">Se connecter</a>
+                        <a href="{{ url('/register') }}">S'enregistrer</a>
                     @endif
                 </div>
             @endif
@@ -82,7 +83,6 @@
                 <div class="title m-b-md">
                     Camille Cordier
                 </div>
-
             </div>
         </div>
     </body>
