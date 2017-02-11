@@ -14,4 +14,12 @@ class Article extends Model
         return $this->belongsTo('App\User');
 
     }
+
+    //posts table in database
+    protected $guarded = [];
+    public function comments()
+    {
+        return $this->hasMany('App\Comments','on_post');
+    }
+
 }
