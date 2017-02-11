@@ -30,7 +30,7 @@
                         </p>
                         <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
                         <hr>
-                        <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                        <img class="img-responsive" src="laravel-iim/public/img/websoongrillg.jpeg" alt="">
                         <hr>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
                         <a class="btn btn-primary" href="/post">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
@@ -84,19 +84,6 @@
                     <!-- Blog Sidebar Widgets Column -->
                     <div class="col-md-4">
 
-                        <!-- Blog Search Well -->
-                        <div class="well">
-                            <h4>Blog Search</h4>
-                            <div class="input-group">
-                                <input type="text" class="form-control">
-                                <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                            </div>
-                            <!-- /.input-group -->
-                        </div>
 
                         <!-- Blog Categories Well -->
                         <div class="well">
