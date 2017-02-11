@@ -7,36 +7,33 @@
 
                 <div class="content">
                     <div class="title m-b-md">
-                        Blog de restaurants
+                        Paris foodlove
                     </div>
                 </div>
-
+                <h1 class="page-header">
+                    Nos restaurants Spécial Saint-Valentin
+                </h1>
                 <div class="row">
-
                     <!-- Blog Entries Column -->
-                    <div class="col-md-8">
-
-                        <h1 class="page-header">
-                            Page Heading
-                            <small>Secondary Text</small>
-                        </h1>
+                    <div class="col-md-6">
 
                         <!-- First Blog Post -->
                         <h2>
-                            <a href="/post">Blog Post Title</a>
+                            <a href="/post">Soon Grill</a>
                         </h2>
                         <p class="lead">
                             by <a href="index.php">Start Bootstrap</a>
                         </p>
                         <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
                         <hr>
-                        <img class="img-responsive" src="laravel-iim/public/img/websoongrillg.jpeg" alt="">
+                        <img class="img-responsive" src="http://www.anous.fr/sites/default/files/visuel/websoongrillg.jpg" alt="">
                         <hr>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
                         <a class="btn btn-primary" href="/post">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                         <hr>
-
+                    </div>
+                    <div class="col-md-6">
                         <!-- Second Blog Post -->
                         <h2>
                             <a href="/post">Blog Post Title</a>
@@ -52,7 +49,10 @@
                         <a class="btn btn-primary" href="/post">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                         <hr>
-
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
                         <!-- Third Blog Post -->
                         <h2>
                             <a href="/post">Blog Post Title</a>
@@ -68,83 +68,67 @@
                         <a class="btn btn-primary" href="/post">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                         <hr>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Third Blog Post -->
+                        <h2>
+                            <a href="/post">Blog Post Title</a>
+                        </h2>
+                        <p class="lead">
+                            by <a href="index.php">Start Bootstrap</a>
+                        </p>
+                        <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
+                        <hr>
+                        <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, voluptates, voluptas dolore ipsam cumque quam veniam accusantium laudantium adipisci architecto itaque dicta aperiam maiores provident id incidunt autem. Magni, ratione.</p>
+                        <a class="btn btn-primary" href="/post">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
+                        <hr>
+                    </div>
                         <!-- Pager -->
-                        <ul class="pager">
-                            <li class="previous">
-                                <a href="#">&larr; Older</a>
-                            </li>
-                            <li class="next">
-                                <a href="#">Newer &rarr;</a>
-                            </li>
-                        </ul>
 
                     </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Third Blog Post -->
+                        <h2>
+                            <a href="/post">Blog Post Title</a>
+                        </h2>
+                        <p class="lead">
+                            by <a href="index.php">Start Bootstrap</a>
+                        </p>
+                        <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
+                        <hr>
+                        <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, voluptates, voluptas dolore ipsam cumque quam veniam accusantium laudantium adipisci architecto itaque dicta aperiam maiores provident id incidunt autem. Magni, ratione.</p>
+                        <a class="btn btn-primary" href="/post">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
-                    <!-- Blog Sidebar Widgets Column -->
-                    <div class="col-md-4">
-
-
-                        <!-- Blog Categories Well -->
-                        <div class="well">
-                            <h4>Blog Categories</h4>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /.col-lg-6 -->
-                                <div class="col-lg-6">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                        <li><a href="#">Category Name</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /.col-lg-6 -->
-                            </div>
-                            <!-- /.row -->
-                        </div>
-
-                        <!-- Side Widget Well -->
-                        <div class="well">
-                            <h4>Side Widget Well</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                        </div>
-
+                        <hr>
                     </div>
+                    <div class="col-md-6">
+                        <!-- Third Blog Post -->
+                        <h2>
+                            <a href="/post">Blog Post Title</a>
+                        </h2>
+                        <p class="lead">
+                            by <a href="index.php">Start Bootstrap</a>
+                        </p>
+                        <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
+                        <hr>
+                        <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, voluptates, voluptas dolore ipsam cumque quam veniam accusantium laudantium adipisci architecto itaque dicta aperiam maiores provident id incidunt autem. Magni, ratione.</p>
+                        <a class="btn btn-primary" href="/post">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+                        <hr>
+                    </div>
+                    <!-- Pager -->
 
                 </div>
-                <!-- /.row -->
-
-                <hr>
-
-                <!-- Footer -->
-                <footer>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <p>Copyright &copy; Your Website 2014</p>
-                        </div>
-                        <!-- /.col-lg-12 -->
                     </div>
-                    <!-- /.row -->
-                </footer>
 
-            </div>
-            <!-- /.container -->
 
             <!-- jQuery -->
             <script src="js/jquery.js"></script>
