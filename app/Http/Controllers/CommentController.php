@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Comments;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+use PhpParser\Comment;
 
 class CommentController extends Controller
 {
@@ -14,7 +16,8 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
+       $comment =Comments::all();
+
     }
 
     /**
@@ -24,7 +27,7 @@ class CommentController extends Controller
      */
     public function create()
     {
-        //
+        return view('articles.create');
     }
 
     /**
@@ -41,9 +44,9 @@ class CommentController extends Controller
         $slug = $request->input('slug');
         Comments::create( $input );
 
-        return redirect($slug)->with('message', 'Commentaire publié');
+        return redirect($slug)->route('article.show')
+            ->with('message', 'Commentaire publié');
     }
-
 
     /**
      * Display the specified resource.
@@ -53,7 +56,6 @@ class CommentController extends Controller
      */
     public function show($id)
     {
-        //
     }
 
     /**
