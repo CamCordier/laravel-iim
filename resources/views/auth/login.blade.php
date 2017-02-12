@@ -61,7 +61,7 @@
                             </div>
                         </div>
                     </form>
-
+                    <img src="img/Fichier3.png">
             </div>
         </div>
     </div>

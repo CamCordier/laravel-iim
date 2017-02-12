@@ -21,7 +21,7 @@
                             <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
 
                             <h1>Article</h1>
-
+                            <br><br><br><br>
                                 <!-- Post Content -->
                                 <ul>
                                     @foreach($articles as $article)

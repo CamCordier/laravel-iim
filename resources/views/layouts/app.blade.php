@@ -41,35 +41,33 @@
 <div id="app">
     <nav class="navbar">
         <div class="container">
-            <div class="navbar-header">
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('') }}">
-                    {{ config('Accueil', 'Accueil') }}
-                </a>
-                <a class="navbar-brand" href="{{ url('/article') }}">
-                    {{ config('Les restaurants', 'Les restaurants') }}
-                </a>
-                <a class="navbar-brand" href="{{ url('/contact') }}">
-                    {{ config('Contact', 'Contact') }}
-                </a>
-            </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    &nbsp;
-                </ul>
+                    <br>
+                <h1>Classements des 10 meilleurs restaurants à Paris</h1>
+                <div class="ligne"></div>
+                <div class="navbar-header">
 
+                    <!-- Collapsed Hamburger -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
+                    <!-- Branding Image -->
+                    <a class="navbar-brand" href="{{ url('') }}">
+                        {{ config('Accueil', 'Accueil') }}
+                    </a>
+                    <a class="navbar-brand" href="{{ url('/article') }}">
+                        {{ config('Découvrir les restaurants', 'Découvrir les restaurants') }}
+                    </a>
+                    <a class="navbar-brand" href="{{ url('/contact') }}">
+                        {{ config('Contact', 'Contact') }}
+                    </a>
+                </div>
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
@@ -105,7 +103,6 @@
     </nav>
 
     @yield('content')
-
 
 <!-- Scripts -->
 <script src="/js/app.js"></script>
