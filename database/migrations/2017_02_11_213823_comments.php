@@ -6,6 +6,14 @@ use Illuminate\Database\Migrations\Migration;
 
 class Comments extends Migration
 {
+    public static function all()
+    {
+    }
+
+    public static function create($input)
+    {
+    }
+
     /**
      * Run the migrations.
      *

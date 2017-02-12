@@ -22,7 +22,7 @@
                     <ul>
                         <li>{{$article->body}}</li>
                         {{$article->user->name }}
-<br>
+                        <br>
                         <a href="{{ route('article.edit', $article->id) }}"
                            class="btn btn-primary">Modifier</a>
 
@@ -38,23 +38,37 @@
                 </div>
                 <hr>
 
+
+
+
                 <!-- Comments Form -->
-                <div class="well">
+
+
+
+
                     <h4>Leave a Comment:</h4>
-                    <form role="form">
+                    <form method="POST" action="{{route('article.store')}}">
+
+                        {{ csrf_field() }}
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="hidden" name="on_post" value="{{ $article->id }}">
+                        <input type="hidden" name="slug" value="{{ $article->slug }}">
+                        <div class="form-group">
                         <div class="form-group">
                             <textarea class="form-control" rows="3"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
-                </div>
+
 
                 <hr>
 
-                <!-- Posted Comments -->
+
+
 
                 <!-- Comment -->
                 <div class="media">
+
                     <a class="pull-left" href="#">
                         <img class="media-object" src="http://placehold.it/64x64" alt="">
                     </a>
@@ -63,6 +77,7 @@
                             <small>August 25, 2014 at 9:30 PM</small>
                         </h4>
                         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
                         <!-- Nested Comment -->
                         <div class="media">
                             <a class="pull-left" href="#">
@@ -78,8 +93,8 @@
                         <!-- End Nested Comment -->
                     </div>
                 </div>
- <hr>
 
-    </div>
+
+            </div>
 
 @endsection
