@@ -8,7 +8,9 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    Tu es connecté, exercices réussis !!!!!
+                    Bienvenue sur notre blog.
+                    <br>
+                    Tu es connecté!
                 </div>
             </div>
         </div>

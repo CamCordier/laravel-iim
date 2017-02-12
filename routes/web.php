@@ -37,8 +37,6 @@ Route::get('/admin', function() {
 
 Route::resource('/comment','CommentController');
 
-
-
-
-
-
+Route::get('/contact', function () {
+    return view('contact');
+});
