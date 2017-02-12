@@ -55,7 +55,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/article') }}">
                     {{ config('Home', 'Home') }}
                 </a>
                 <a class="navbar-brand" href="{{ url('/contact') }}">
@@ -105,6 +105,16 @@
     </nav>
 
     @yield('content')
+
+<!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; Your Website 2014</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
 </div>
 
 <!-- Scripts -->
