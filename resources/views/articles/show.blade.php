@@ -8,12 +8,13 @@
             <!-- Blog Post Content Column -->
             <div class="col-lg-12">
 
+
                 <!-- Title -->
                 <h1>{{$article->title}}</h1>
                 <!-- Date/Time -->
                 <p><span class="glyphicon glyphicon-time"></span> Posted on {{$article->created_at}}</p>
 
-                <hr>
+                <hr><hr><hr><hr><hr>
 
                 <!-- Preview Image -->
                 <img class="img-responsive" src="http://placehold.it/900x300" alt="">

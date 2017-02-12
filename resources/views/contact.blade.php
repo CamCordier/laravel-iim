@@ -4,10 +4,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h1>Contact</h1>
-                    <br> <br> <br>
-
+                <h1>Contactez-nous</h1>
+                <div class="ligne"></div>
+                    <br>
                         <!-- Name input-->
+
                         <form method="post">
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="name">Nom</label>
@@ -37,9 +38,11 @@
                         <!-- Form actions -->
                         <div class="form-group">
                             <div class="col-md-12 text-right">
-                                <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
+                                <br>
+                                <button type="submit" class="btn btn-secondary btn-lg">Envoyer</button>
                             </div>
                         </div>
+                            <img src="img/Fichier3.png">
             </div>
         </div>
     </div>

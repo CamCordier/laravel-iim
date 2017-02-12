@@ -4,8 +4,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Dashboard</div>
+                <h1>Mon profil</h1>
+                <div class="ligne"></div>
+                <div class="panel-body">
                        @if(Auth::check())
                        Vous êtes bien connecté !
 

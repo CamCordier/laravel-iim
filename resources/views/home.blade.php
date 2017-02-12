@@ -4,9 +4,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
+                <h1>Dashboard</h1>
+                <div class="ligne"></div>
                 <div class="panel-body">
                     Bienvenue sur notre blog.
                     <br>

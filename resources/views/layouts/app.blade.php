@@ -41,6 +41,7 @@
 <div id="app">
     <nav class="navbar">
         <div class="container">
+            <br>
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
@@ -56,7 +57,7 @@
                     {{ config('Accueil', 'Accueil') }}
                 </a>
                 <a class="navbar-brand" href="{{ url('/article') }}">
-                    {{ config('Les restaurants', 'Les restaurants') }}
+                    {{ config('Restaurants', 'Restaurants') }}
                 </a>
                 <a class="navbar-brand" href="{{ url('/contact') }}">
                     {{ config('Contact', 'Contact') }}
@@ -65,11 +66,9 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    &nbsp;
+                <ul class="nav navbar-nav navbar-center">
+                    <h1>Classement des 10 meilleurs restaurants de Paris</h1>
                 </ul>
-
-
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
@@ -105,8 +104,7 @@
     </nav>
 
     @yield('content')
-
-
+    
 <!-- Scripts -->
 <script src="/js/app.js"></script>
 </body>

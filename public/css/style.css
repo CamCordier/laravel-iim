@@ -1,8 +1,13 @@
-
-
+body{
+    background-color: white;
+    font-family: 'Bodoni 72 Oldstyle';
+}
+h1, h2, h3, h4, h5{
+    font-family: 'Bodoni 72 Oldstyle';
+}
 .background{
-    width: 1392px;
-    height: 890px;
+    width: 1407px;
+    height: 668.5px;
 }
 
 .full-height {
@@ -35,4 +40,12 @@
 
 .m-b-md {
     margin-bottom: 30px;
+}
+
+.ligne {
+    border-bottom: 2px solid goldenrod;
+}
+
+.background{
+    margin-top: -126px;
 }
