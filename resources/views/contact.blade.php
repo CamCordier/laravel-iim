@@ -4,42 +4,44 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h1>contact</h1>
+                <h1>Contact</h1>
                     <br> <br> <br>
 
-                    <fieldset>
                         <!-- Name input-->
+                        <form method="post">
                         <div class="form-group">
-                            <label class="col-md-3 control-label" for="name">Name</label>
+                            <label class="col-md-3 control-label" for="name">Nom</label>
                             <div class="col-md-9">
-                                <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+                                <input id="name" name="name" type="text" placeholder="Votre nom" class="form-control">
                             </div>
                         </div>
 
                         <!-- Email input-->
                         <div class="form-group">
-                            <label class="col-md-3 control-label" for="email">Your E-mail</label>
+                            <label class="col-md-3 control-label" for="email">E-mail</label>
                             <div class="col-md-9">
-                                <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+                                <input id="email" name="email" type="text" placeholder="Votre email" class="form-control">
                             </div>
                         </div>
 
                         <!-- Message body -->
                         <div class="form-group">
-                            <label class="col-md-3 control-label" for="message">Your message</label>
+                            <label class="col-md-3 control-label" for="message">Votre message</label>
                             <div class="col-md-9">
-                                <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+                                <textarea class="form-control" id="message" name="Votre message" placeholder="Entrer votre message ici..." rows="5"></textarea>
                             </div>
                         </div>
+
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                         <!-- Form actions -->
                         <div class="form-group">
                             <div class="col-md-12 text-right">
-                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
                             </div>
                         </div>
             </div>
         </div>
     </div>
-    </fieldset>
+    </form>
 @endsection

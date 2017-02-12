@@ -22,9 +22,6 @@
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/blog-home.css" rel="stylesheet">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,7 +39,7 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar">
         <div class="container">
             <div class="navbar-header">
 
@@ -55,8 +52,11 @@
                 </button>
 
                 <!-- Branding Image -->
+                <a class="navbar-brand" href="{{ url('') }}">
+                    {{ config('Accueil', 'Accueil') }}
+                </a>
                 <a class="navbar-brand" href="{{ url('/article') }}">
-                    {{ config('Home', 'Home') }}
+                    {{ config('Les restaurants', 'Les restaurants') }}
                 </a>
                 <a class="navbar-brand" href="{{ url('/contact') }}">
                     {{ config('Contact', 'Contact') }}
@@ -106,16 +106,6 @@
 
     @yield('content')
 
-<!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; Your Website 2014</p>
-            </div>
-        </div>
-        <!-- /.row -->
-    </footer>
-</div>
 
 <!-- Scripts -->
 <script src="/js/app.js"></script>
