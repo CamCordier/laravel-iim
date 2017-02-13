@@ -10,6 +10,8 @@ class Article extends Model
          'title', 'body', 'user_id',
     ];
 
+
+
     public function user(){
         return $this->belongsTo('App\User');
 

@@ -1,14 +1,11 @@
-body{
-    background-color: white;
-    font-family: 'Bodoni 72 Oldstyle';
-}
-h1, h2, h3, h4, h5{
-    font-family: 'Bodoni 72 Oldstyle';
-}
 .background{
-    width: 1407px;
-    height: 667px;
+    width: 1392px;
+    height: 822px;
+    margin-top: -21px;
 }
+
+
+
 
 .full-height {
     height: 100vh;
@@ -41,11 +38,83 @@ h1, h2, h3, h4, h5{
 .m-b-md {
     margin-bottom: 30px;
 }
+.page2{
+    margin-top: -600px;
+    font-size: 426%;
+    color: white;
+    text-align: center;
+    margin-bottom: 250px;
 
-.ligne {
-    border-bottom: 2px solid goldenrod;
 }
 
-.background{
-    margin-top: -176px;
+.resto img {
+    margin-top: -1em;
+    position: relative;
+    z-index: -1;
+    margin-bottom: 200px;
+}
+
+.pres p{
+    margin-bottom: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    color: black;
+}
+.pres h2{
+    text-align: center;
+    font-weight: 400;
+
+}
+ul{
+    margin-left: 23%;
+    margin-right: -21%;
+}
+
+.pagination {
+    margin-left: 61%;
+    margin-right: -21%;
+}
+article{
+    color: black;
+}
+
+.pagewelcome h1{
+    margin-top: -707px;
+    font-size: 426%;
+    margin-bottom: 137px;
+    font-weight: 400;
+
+
+}
+
+
+
+
+.myButton {
+    margin-left: 40%;
+    -moz-box-shadow: inset -3px 1px 25px -2px #383838;
+    -webkit-box-shadow: inset -3px 1px 25px -2px #383838;
+    box-shadow: inset -3px 1px 25px -2px #383838;
+    background-color: transparent;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #e6b82e;
+    display: inline-block;
+    cursor: pointer;
+    color: #e6b82e;
+    font-family: Georgia;
+    font-size: 23px;
+    padding: 18px 57px;
+    text-decoration: none;
+}
+
+..myButton:hover {
+    background-color:transparent;
+    color: red;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
 }

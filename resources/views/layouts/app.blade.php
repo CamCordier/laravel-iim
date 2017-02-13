@@ -45,7 +45,7 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <br>
-                <h1>Classements des 10 meilleurs restaurants à Paris</h1>
+
                 <div class="ligne"></div>
                 <div class="navbar-header">
 
@@ -59,13 +59,13 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('') }}">
-                        {{ config('Accueil', 'Accueil') }}
+                        {{ config('Accueil', ' | Accueil | ') }}
                     </a>
                     <a class="navbar-brand" href="{{ url('/article') }}">
-                        {{ config('Découvrir les restaurants', 'Découvrir les restaurants') }}
+                        {{ config('Découvrir les restaurants', ' | Découvrir les restaurants |') }}
                     </a>
                     <a class="navbar-brand" href="{{ url('/contact') }}">
-                        {{ config('Contact', 'Contact') }}
+                        {{ config('Contact', ' | Contact | ') }}
                     </a>
                 </div>
                 <!-- Right Side Of Navbar -->
@@ -101,7 +101,7 @@
             </div>
         </div>
     </nav>
-
+<hr>
     @yield('content')
 
 <!-- Scripts -->

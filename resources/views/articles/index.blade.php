@@ -4,59 +4,61 @@
     <!-- Page Content -->
     <div class="container">
 
-        <div class="row">
-            <!-- Blog Post Content Column -->
-            <div class="col-lg-8">
-                <!-- Title -->
-                <h1>Blog Post Title</h1>
-                <div class="container">
-                    <div class="row">
-                            @include('messages.success')
-
-                        <div class="col-md-10">
-
-                            <p class="lead">
-                                by <a href="index.php">Start Bootstrap</a>
-                            </p>
-                            <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
-
-                            <h1>Article</h1>
-                            <br><br><br><br>
-                                <!-- Post Content -->
-                                <ul>
-                                    @foreach($articles as $article)
-                                        <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-                                        <a href="{{ route('article.show', $article->id) }}">{{$article->body}}</a>
-                                        <br><br><hr><br><br>
-                                    @endforeach
-                                </ul>
-                                {{$articles->links()}}
-
-                        </div>
-                      </div>
-                 </div>
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
+        <div class="content">
+            <div class="title m-b-md">
+                Paris foodlove
             </div>
-        </footer>
-
+            <br><br>
+            <div class="resto">
+                <img class="img-responsive" src="http://www.anous.fr/sites/default/files/visuel/websoongrillg.jpg" alt="">
             </div>
         </div>
+        <div class="page2">
+            <p>Nos restaurants Spécial <br> Saint-Valentin</p>
+        </div>
+
+
+        <div class="pres">
+            <h2>Bienvenue</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.U
+                t enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi u
+                t aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum
+            </p>
+        </div>
+
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+
+                @include('messages.success')
+                <ul>
+                    @foreach($articles as $article)
+                        <h2>
+                            <a href="{{ route('article.show', $article->id) }}">{{$article->title}}</a>
+                        </h2>
+
+                        <p>Posté le {{$article->created_at}}</p>
+                        <br><br><br><br><br>
+                        <img class="img-responsive" src="http://www.anous.fr/sites/default/files/visuel/websoongrillg.jpg" alt="">
+                        <br><article>
+                            {!! str_limit($article->body, $limit = 150, $end = '.......') !!}
+                        </article>
+                        <br>
+
+                        <i><a  href="{{ route('article.show', $article->id) }}">Read More</a></i>
+                        <br><hr>
+
+                        <br>
+                    @endforeach
+                </ul>
+
+                {{$articles->links()}}
+            </div>
+        </div>
+
     </div>
-
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    </body>
-
-    </html>
 
 @endsection
