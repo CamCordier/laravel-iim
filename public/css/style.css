@@ -3,10 +3,6 @@
     height: 822px;
     margin-top: -21px;
 }
-
-
-
-
 .full-height {
     height: 100vh;
 }
@@ -85,11 +81,7 @@ article{
     margin-bottom: 137px;
     font-weight: 400;
 
-
 }
-
-
-
 
 .myButton {
     margin-left: 40%;
@@ -104,7 +96,6 @@ article{
     display: inline-block;
     cursor: pointer;
     color: #e6b82e;
-    font-family: Georgia;
     font-size: 23px;
     padding: 18px 57px;
     text-decoration: none;
@@ -112,9 +103,17 @@ article{
 
 ..myButton:hover {
     background-color:transparent;
-    color: red;
 }
 .myButton:active {
     position:relative;
     top:1px;
+}
+
+.panel-body ul{
+    margin-top: 39px;
+    margin-bottom: 11px;
+    margin-left: 0;
+    margin-right: 28%;
+    color: black;
+
 }

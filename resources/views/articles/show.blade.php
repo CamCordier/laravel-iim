@@ -4,25 +4,24 @@
     <div class="container">
 
         <div class="row">
-
-            <!-- Blog Post Content Column -->
             <div class="col-lg-12">
 
 
                 <!-- Title -->
-                <h1>{{$article->title}}</h1>
-                <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Posted on {{$article->created_at}}</p>
+                <h1>- {{$article->title}} -</h1>
 
-                <hr><hr><hr><hr><hr>
+                <hr>
+                <br><br>   <br><br>
 
                 <!-- Preview Image -->
                 <img class="img-responsive" src="http://placehold.it/900x300" alt="">
 
                 <div class="panel-body">
                     <ul>
-                        <li>{{$article->body}}</li>
-                        {{$article->user->name }}
+                        {{$article->body}}
+                        <br><br>
+                        {{$article->user->name }}<br>
+                        <p> <i>Posté le {{$article->created_at}}</i></p>
                         <br>
                         <a href="{{ route('article.edit', $article->id) }}"
                            class="btn btn-primary">Modifier</a>

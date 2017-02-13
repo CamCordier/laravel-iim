@@ -7,5 +7,5 @@
 <div class="pagewelcome">
 <h1 style="text-align: center";> - Classements des 10 meilleurs restaurants à Paris -</h1>
 </div>
-<a href="#" class="myButton">Découvrir</a>
+<a href="{{ url('/article') }}" class="myButton">Découvrir</a>
 @endsection
