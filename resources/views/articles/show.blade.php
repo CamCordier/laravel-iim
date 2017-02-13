@@ -21,7 +21,18 @@
                         {{$article->body}}
                         <br><br>
                         {{$article->user->name }}<br>
-                        <p> <i>Posté le {{$article->created_at}}</i></p>
+                        <p><i>Posté le {{$article->created_at}}</i></p>
+
+                       <p>Partager sur : @include('component.share', [
+            'url' => request()->fullUrl(),
+            'description' => 'This is really cool link',
+            'image' => 'http://placehold.it/300x300?text=Cool+link'
+        ]) </p>
+
+                    <!--    <div class="fb-share-button" data-href="{{$article->body}}" data-layout="box_count" data-size="small" data-mobile-iframe="true">
+                            <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
+                                Partager</a></div> -->
+
                         <br>
                         <a href="{{ route('article.edit', $article->id) }}"
                            class="btn btn-primary">Modifier</a>
@@ -29,6 +40,8 @@
                         <form method="POST" action="{{ route('article.destroy', $article->id) }}">
 
                             {{ csrf_field() }}
+
+
                             <input type="hidden" name="_method" value="DELETE">
 
                             <input class="btn btn-danger"
@@ -39,14 +52,7 @@
                 <hr>
 
 
-
-
-                <!-- Comments Form -->
-
-
-
-
-                    <h4>Leave a Comment:</h4>
+                <h4>Leave a Comment:</h4>
                     <form method="POST" action="{{route('article.store')}}">
 
                         {{ csrf_field() }}
@@ -62,7 +68,6 @@
 
 
                 <hr>
-
 
 
 
@@ -93,8 +98,5 @@
                         <!-- End Nested Comment -->
                     </div>
                 </div>
-
-
             </div>
-
 @endsection

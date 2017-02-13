@@ -1,6 +1,6 @@
 .background{
     width: 1392px;
-    height: 822px;
+    height: 719px;
     margin-top: -21px;
 }
 .full-height {
@@ -76,7 +76,7 @@ article{
 }
 
 .pagewelcome h1{
-    margin-top: -707px;
+    margin-top: -645px;
     font-size: 426%;
     margin-bottom: 137px;
     font-weight: 400;
@@ -102,11 +102,15 @@ article{
 }
 
 ..myButton:hover {
-    background-color:transparent;
+    background-color: #e6b82e;
+    border: 1px solid black;
+    text-decoration: none;
 }
+
 .myButton:active {
     position:relative;
     top:1px;
+    text-decoration: none;
 }
 
 .panel-body ul{
@@ -117,3 +121,27 @@ article{
     color: black;
 
 }
+.pagination>.active>a, .pagination>.active>a:focus,
+.pagination>.active>a:hover, .pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    z-index: 3;
+    color: black;
+    background-color: goldenrod;
+    border-color: black;
+    cursor: default;
+}
+
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 4px 15px;
+    line-height: 1.6;
+    text-decoration: none;
+    color: black;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+}
+
+
