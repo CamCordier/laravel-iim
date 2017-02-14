@@ -14,18 +14,18 @@
             </div>
         </div>
         <div class="page2">
-            <p>Nos restaurants Spécial <br> Saint-Valentin</p>
+            <p>Nos restaurants <br>pour la Saint-Valentin</p>
         </div>
 
 
         <div class="pres">
-            <h2>Bienvenue</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.U
-                t enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi u
-                t aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum
+            <h2>Pour une soirée inoubliable</h2>
+            <p>Inviter votre amoureuse dans un restaurant pour la Saint Valentin,
+                c'est bien mais pour marquer le coup et lui offrir une soirée inoubliable,
+                le choix d'un restaurant original, c'est encore mieux.
+                Ce 14 février 2017 arrivant à grand pas,
+                il est plus que temps de réserver pour ne pas vous retrouver le bec dans l'eau.
+                <br>Nous vous avons réuni les adresses des 10 meilleurs restaurants de Paris pour la plus belle Saint-Valentin.
             </p>
         </div>
 
@@ -48,7 +48,7 @@
                         </article>
                         <br>
 
-                        <i><a  href="{{ route('article.show', $article->id) }}">Read More</a></i>
+                        <i><a  href="{{ route('article.show', $article->id) }}">En savoir plus ici</a></i>
                         <br><hr>
 
                         <br>
