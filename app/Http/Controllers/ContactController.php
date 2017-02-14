@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Contact;
+
 
 class ContactController extends Controller
 {
@@ -21,13 +23,9 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-        protected function create(array $data)
+    public function create()
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        //
     }
 
     /**
@@ -38,7 +36,13 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        ContactController::create([
+           'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message,
+        ]);
+
+        return redirect()->route('contact.index');
     }
 
     /**

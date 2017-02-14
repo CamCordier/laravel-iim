@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Article extends Model
 {
@@ -17,11 +18,16 @@ class Article extends Model
 
     }
 
-    //posts table in database
-    protected $guarded = [];
-    public function comments()
+
+    public function likes()
     {
-        return $this->hasMany('App\Comments','on_post');
+        return $this->morphToMany('App\User', 'likeable')->whereDeletedAt(null);
     }
 
+    public function getIsLikedAttribute()
+    {
+        $like = $this->likes()->whereUserId(Auth::id())->first();
+        return (!is_null($like)) ? true : false;
+    }
 }
+

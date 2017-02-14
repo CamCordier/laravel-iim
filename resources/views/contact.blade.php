@@ -4,12 +4,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
+                @include('messages.error')
                 <h1>Contactez-nous</h1>
                 <div class="ligne"></div>
                     <br>
-                        <!-- Name input-->
 
-                        <form method="post">
+                        <form method="post" action="{{route('contact.store')}}">
+                            {{ csrf_field() }}
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="name">Nom</label>
                             <div class="col-md-9">
@@ -29,11 +30,10 @@
                         <div class="form-group">
                             <label class="col-md-3 control-label" for="message">Votre message</label>
                             <div class="col-md-9">
-                                <textarea class="form-control" id="message" name="Votre message" placeholder="Entrer votre message ici..." rows="5"></textarea>
+                                <textarea class="form-control" id="message" name="message" placeholder="Entrer votre message ici..." rows="5"></textarea>
                             </div>
                         </div>
 
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                         <!-- Form actions -->
                         <div class="form-group">

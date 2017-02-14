@@ -37,7 +37,7 @@ Route::get('/admin', function() {
 
 Route::resource('/comment','CommentController');
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::resource('/contact','ContactController');
 
+Route::get('product/like/{id}', ['as' => 'product.like', 'uses' => 'LikeController@likeProduct']);
+Route::get('article/like/{id}', ['as' => 'article.like', 'uses' => 'LikeController@likeArticle']);
