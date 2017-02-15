@@ -29,6 +29,7 @@
             </p>
         </div>
 
+
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-8">
@@ -42,8 +43,9 @@
 
                         <p>Posté le {{$article->created_at}}</p>
                         <br><br><br><br><br>
-                        <img class="img-responsive" src="http://www.anous.fr/sites/default/files/visuel/websoongrillg.jpg" alt="">
-                        <br><article>
+                        <img src="{!! '/images/'.$article->filePath !!}" style="width:100%; height:150%;  margin-right:25px;">
+                        <br>
+                        <article>
                             {!! str_limit($article->body, $limit = 150, $end = '.......') !!}
                         </article>
                         <br>

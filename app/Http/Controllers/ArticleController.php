@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 
 class ArticleController extends Controller
 {
@@ -48,27 +50,45 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
+        $image = new Article();
         $this->validate($request, [
-           'title' => 'required|min:6',
+            'title' => 'required|min:6',
             'body' => 'required|min:10',
+            'image' => 'required'
 
         ],
-        [
-           'title.required' => 'Le titre est requis',
-            'body.required' => 'Le contenu est requis'
-        ]);
+            [
+                'title.required' => 'Le titre est requis',
+                'body.required' => 'Le contenu est requis'
+            ]);
 
         $input = $request->input();
         $input['user_id'] = Auth::user()->id;
 
-        $article = new Article;
+        $image->title = $request->title;
+        $image->body = $request->body;
+        if ($request->hasFile('image')) {
+            $file = Input::file('image');
+            //getting timestamp
+            $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
 
-        $article->fill($input)->save();
+            $article = new Article;
 
-        return redirect()->route('article.index')
-           ->with('success', 'L\'article a bien été publié');
+            $article->fill($input)->save();
+            $name = $timestamp . '-' . $file->getClientOriginalName();
+
+            $image->filePath = $name;
+
+            $file->move(public_path() . '/images/', $name);
+            $image->fill($input)->save();
+
+            return redirect()->route('article.index')
+                ->with('success', 'L\'article a bien été publié');
+
+        }
 
     }
+
 
     /**
      * Display the specified resource.
@@ -124,7 +144,7 @@ class ArticleController extends Controller
 
         $article->fill($input)->save();
 
-        return redirect()->route('article.index')
+        return redirect()->route('article.update')
             ->with('success', 'L\'article a bien été modifié');
     }
 

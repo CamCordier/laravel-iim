@@ -6,20 +6,34 @@
             <div class="col-md-8 col-md-offset-2">
                 @include('messages.error')
                 <div class="panel panel-default">
-                    <div class="panel-heading">Dashboard</div>
                     <h1>Editer un article</h1>
+                 <br><br>
+                    {!! Form::open(['action'=>'ArticleController@store', 'files'=>true]) !!}
+                    {{ csrf_field() }}
 
-                    <form method="POST" action="{{route('article.update', $article->id) }}">
-                        <input type="hidden" name="_method" value="PUT">
-                        {{ csrf_field() }}
-                        <input class="form-control" type="text" name="title"
-                               value="{{ $article->title }}" placeholder="Titre">
 
-                        <textarea class=form-control" name="body" placeholder="Contenu">
-                            {{ $article->content }}
-                        </textarea>
-                        <input type="submit" value="Publier" class="btn btn-info">
-                    </form>
+                    <div class="form-group">
+                        {!! Form::label('title', 'Title:') !!}
+                        {!! Form::text('title', null, ['class'=>'form-control']) !!}
+                    </div>
+
+
+                    <div class="form-group">
+                        {!! Form::label('body', 'Contenu:') !!}
+                        {!! Form::textarea('body', null, ['class'=>'form-control', 'rows'=>5] ) !!}
+                    </div>
+
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        {!! Form::label('image', 'Choose an image') !!}
+                        {!! Form::file('image') !!}
+                    </div>
+                    {{ csrf_field() }}
+                    <div class="form-group">
+                        {!! Form::submit('Publier', array( 'class'=>'btn btn-danger form-control' )) !!}
+                    </div>
+                    {!! Form::close() !!}
+
                 </div>
             </div>
         </div>

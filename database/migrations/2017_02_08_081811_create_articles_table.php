@@ -17,6 +17,7 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->string('title', 255);
             $table->text('body');
+            $table->string('filePath')->default('default.jpg');
             $table->integer('user_id')->unsigned();
             $table->timestamps();
 

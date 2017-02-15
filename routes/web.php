@@ -41,3 +41,6 @@ Route::resource('/contact','ContactController');
 
 Route::get('product/like/{id}', ['as' => 'product.like', 'uses' => 'LikeController@likeProduct']);
 Route::get('article/like/{id}', ['as' => 'article.like', 'uses' => 'LikeController@likeArticle']);
+
+
+Route::resource('/edit','article.edit');
