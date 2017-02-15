@@ -55,10 +55,18 @@
                         <br><hr>
 
                         <br>
+
                     @endforeach
                 </ul>
 
                 {{$articles->links()}}
+
+
+                <a  href="{{ route('article.edit', $article->id) }}">
+                    {{ config('Editer un article', ' | Editer un article | ') }}
+                </a>
+
+
             </div>
         </div>
 

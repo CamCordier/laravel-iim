@@ -69,9 +69,6 @@
                     <a class="navbar-brand" href="{{ url('/contact') }}">
                         {{ config('Contact', ' | Contact | ') }}
                     </a>
-                    <a class="navbar-brand" href="{{ route('article.edit', $article->id) }}">
-                        {{ config('Editer un article', ' | Editer un article | ') }}
-                    </a>
 
                 </div>
                 <!-- Right Side Of Navbar -->
