@@ -17,8 +17,8 @@
                             <ul>
 
                                 {{$article->body}}
-                                <p><i>Posté le {{$article->created_at}}</i></p>
-                                <strong>Par :{{ $article->user->name }}</strong>
+                                <br><br> <p><i>Posté le {{$article->created_at}}</i></p>
+                                <strong>Par : {{ $article->user->name }}</strong>
 <br><br>
                                 <p>Partager sur :
                                     @include('component.share', [

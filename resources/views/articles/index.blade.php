@@ -46,6 +46,7 @@
                         <img src="{!! '/images/'.$article->filePath !!}" style="width:100%; height:150%;  margin-right:25px;">
                         <br>
                         <article>
+                            <br>
                             {!! str_limit($article->body, $limit = 150, $end = '.......') !!}
                         </article>
                         <br>
