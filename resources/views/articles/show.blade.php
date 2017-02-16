@@ -9,7 +9,7 @@
                 <hr>
                 <br><br>
                 <br><br>
-                <img src="{!! '/images/'.$article->filePath !!}" style="width:100%; height:150%;  margin-right:25px;">
+                <img src="{!! 'public/images/'.$article->filePath !!}" style="width:100%; height:150%;  margin-right:25px;">
                         <br>
                         <br>
 
@@ -26,6 +26,7 @@
                     'description' => 'This is really cool link',
                     'image' => 'http://placehold.it/300x300?text=Cool+link'
                 ]) </p>
+
 
                         <br>
                                 <a href=" {{ route('article.edit',$article->id) }}"
