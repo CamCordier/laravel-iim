@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Comments;
+use App\Article;
+use App\Comment;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Input;
-use PhpParser\Comment;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class CommentController extends Controller
 {
@@ -16,8 +17,7 @@ class CommentController extends Controller
      */
     public function index()
     {
-       $comment =Comments::all();
-
+        //
     }
 
     /**
@@ -38,14 +38,22 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        $input['from_user'] = $request->user()->id;
-        $input['on_post'] = $request->input('on_post');
-        $input['body'] = $request->input('body');
-        $slug = $request->input('slug');
-        Comments::create( $input );
+        $this->validate($request,
+            [
+                'content' => 'required|min:10',
+            ],
+            [
+                'content.required' => 'Le contenu est requis'
+            ]);
 
-        return redirect($slug)->route('article.show')
-            ->with('message', 'Commentaire publié');
+        $input = $request->input();
+        $input['user_id'] = Auth::user()->id;
+        $comment = new Comment;
+
+        $comment->fill($input)->save();
+        $id = $input['article_id'];
+        return redirect()->route('article.show', compact('id'))
+            ->with('success', 'Votre commentaire a bien été envoyé !');
     }
 
     /**
@@ -56,6 +64,7 @@ class CommentController extends Controller
      */
     public function show($id)
     {
+        //
     }
 
     /**
@@ -66,6 +75,9 @@ class CommentController extends Controller
      */
     public function edit($id)
     {
+        $article = Article::find($id);
+        $comment = Comment::find($id);
+        return view('articles.comment', compact('comment', 'article'));
     }
 
     /**
@@ -78,24 +90,18 @@ class CommentController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'body' => 'required|min:10',
-
+            'content' => 'required|min:10',
         ],
             [
-                'body.required' => 'Le contenu est requis'
+                'content.required' => 'Le contenu est requis'
             ]);
-        $comment = Comments::find($id);
+        $comment = Comment::find($id);
         $input = $request->input();
 
-        $input['user_id'] = Auth::user()->id;
-
-        $comment = new Comments;
-
         $comment->fill($input)->save();
-
-        return redirect()->route('article.index')
-            ->with('success', 'Le commentaire a bien été modifié');
-
+        $article_id = $request->article_id;
+        return redirect()->route('article.show', compact('article_id'))
+            ->with('success', 'Le commentaire a bien été modifié !');
     }
 
     /**
@@ -106,10 +112,9 @@ class CommentController extends Controller
      */
     public function destroy($id)
     {
-        $comment = Comments::find($id);
+        $comment = Comment::find($id);
         $comment->delete();
-
-        return redirect()->route('article.index')
-            ->with('success', 'Le commentaire a bien été supprimé');
+        return redirect::back()
+            ->with('success', 'Le commentaire a bien été supprimé !');
     }
 }

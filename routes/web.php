@@ -38,7 +38,6 @@ Route::get('/admin', function() {
 });
 Route::resource('/admin','AdminController');
 
-
 Route::resource('/comment','CommentController');
 
 Route::resource('/contact','ContactController');

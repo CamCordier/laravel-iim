@@ -12,3 +12,4 @@ class Contacts extends Model
         return $this->belongsTo('App\User');
     }
 }
+

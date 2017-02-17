@@ -35,10 +35,41 @@
                                     <input type="submit" value="Supprimer" class="btn btn-danger">
                                     <br><br>
                                 </form>
+
+
                             @endif
                             {{ csrf_field() }}
 
                         </ul>
+
+                        <div class="panel-body">
+                            <div class="panel-heading">
+                                <form method="POST" action="{{ route('comment.store') }}">
+                                    {{csrf_field()}}
+                                    <input type="hidden" name="article_id" value="{{ $article->id }}">
+                                    <textarea class="form-control" name="content" placeholder="Commentaire"></textarea>
+                                    <div class="panel-heading">
+                                        <input type="submit" value="envoyer" class="btn btn-info">
+                                    </div>
+                                </form>
+
+                        @foreach($comments as $comment)
+                            @if($comment->article_id == $article->id)
+                                <p>Commentaire posté par {{$comment->user->name}} </p>
+                                <p>{{ $comment->content }}</p>
+                                @if($comments = Auth::user()->id == $comment->user->id)
+                                    <a href="{{ route('comment.edit', $comment->id) }}" class="btn btn-primary">Modifier</a>
+                                    <form method="POST" action="{{ route('comment.destroy', $comment->id) }}">
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="_method" value="delete">
+                                        <input type="submit" value="Supprimer" class="btn btn-danger">
+                                        <br><br>
+                                    </form>
+                                @else
+                                @endif
+                            @else
+                            @endif
+                        @endforeach
                     </div>
                     <hr>
 

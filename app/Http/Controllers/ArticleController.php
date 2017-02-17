@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Comment;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -100,9 +101,10 @@ class ArticleController extends Controller
     public function show($id)
     {
         $article = Article::find($id);
+        $comments = Comment::all();
+        $comment = Comment::find($id);
 
-        return view ('articles.show', compact('article'));
-
+        return view ('articles.show', compact('article', 'comments', 'comment'));
     }
 
     /**
@@ -164,30 +166,6 @@ class ArticleController extends Controller
           ->with('success', 'L\'article a bien été supprimé');
     }
 
-    public function isLikedByMe($id)
-    {
-        $post = Post::findOrFail($id)->first();
-        if (Like::whereUserId(Auth::id())->wherePostId($post->id)->exists()){
-            return 'true';
-        }
-        return 'false';
-    }
 
-    public function like(Post $post)
-    {
-        $existing_like = Like::withTrashed()->wherePostId($post->id)->whereUserId(Auth::id())->first();
 
-        if (is_null($existing_like)) {
-            Like::create([
-                'post_id' => $post->id,
-                'user_id' => Auth::id()
-            ]);
-        } else {
-            if (is_null($existing_like->deleted_at)) {
-                $existing_like->delete();
-            } else {
-                $existing_like->restore();
-            }
-        }
-    }
 }
