@@ -47,3 +47,5 @@ Route::get('/contact', function() {
     return view('contact');
 });
 Route::resource('/edit','article.edit');
+
+Route::resource('/admin','AdminController');

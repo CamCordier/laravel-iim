@@ -28,7 +28,8 @@ class ArticleController extends Controller
     {
         $articles = Article::all();
 
-        $articles = Article::paginate(5);
+        $articles = Article::orderBy('id', 'DESC')->paginate(5);
+
         return view('articles.index', compact('articles'));
     }
 

@@ -44,6 +44,13 @@
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control" name="password" required>
 
+                                <label>
+                                    <select name="isAdmin">
+                                        <option value="0">Utilisateur</option>
+                                        <option value="1">Administrateur</option>
+                                    </select>
+                                </label>
+
                                 @if ($errors->has('password'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>

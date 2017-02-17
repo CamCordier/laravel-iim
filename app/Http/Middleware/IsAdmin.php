@@ -16,6 +16,7 @@ class IsAdmin
         if(Auth::check() && Auth::user()->isAdmin) {
             return $next($request);
         }
+
         return redirect()
             ->route('article.index')
             ->with('success', 'Vous n\'avez pas les droits nécessaires.');
