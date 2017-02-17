@@ -6,8 +6,8 @@
             <div class="col-md-8 col-md-offset-2">
                 @include('messages.error')
                 <div class="panel panel-default">
-                    <div class="panel-heading">Dashboard</div>
-                    <h1>Publier un article</h1>
+
+                    <h1>Modifier un article</h1>
 
                     <form method="POST" action="{{route('article.store')}}">
                         {{ csrf_field() }}

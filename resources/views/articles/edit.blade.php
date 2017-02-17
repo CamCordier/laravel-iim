@@ -13,7 +13,7 @@
 
 
                     <div class="form-group">
-                        {!! Form::label('title', 'Title:') !!}
+                        {!! Form::label('title', 'Titre:') !!}
                         {!! Form::text('title', null, ['class'=>'form-control']) !!}
                     </div>
 
@@ -25,7 +25,7 @@
 
                     {{ csrf_field() }}
                     <div class="form-group">
-                        {!! Form::label('image', 'Choose an image') !!}
+                        {!! Form::label('image', 'Choisir une image') !!}
                         {!! Form::file('image') !!}
                     </div>
                     {{ csrf_field() }}

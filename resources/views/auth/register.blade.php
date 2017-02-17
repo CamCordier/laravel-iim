@@ -44,13 +44,6 @@
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control" name="password" required>
 
-                                <label>
-                                    <select name="isAdmin">
-                                        <option value="0">Utilisateur</option>
-                                        <option value="1">Administrateur</option>
-                                    </select>
-                                </label>
-
                                 @if ($errors->has('password'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
@@ -66,7 +59,12 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-
+                        <label>
+                            <select name="isAdmin">
+                                <option value="0">Utilisateur</option>
+                                <option value="1">Administrateur</option>
+                            </select>
+                        </label>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-secondary btn-lg">

@@ -61,11 +61,11 @@
 
                 {{$articles->links()}}
 
-
+                @if(Auth::check() and auth()->user())
                 <a  href="{{ route('article.edit', $article->id) }}">
-                    {{ config('Editer un article', ' | Editer un article | ') }}
+                  Rajouter un article
                 </a>
-
+               @endif
 
 
             </div>
