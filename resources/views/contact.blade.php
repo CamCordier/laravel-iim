@@ -42,7 +42,7 @@
                                 <button type="submit" class="btn btn-secondary btn-lg">Envoyer</button>
                             </div>
                         </div>
-                            <img src="img/Fichier3.png">
+
 
             </div>
         </div>

@@ -28,24 +28,23 @@ Route::get('/home', 'HomeController@index');
 
 Route::resource('/article', 'ArticleController');
 
+Route::resource('/edit','article.edit');
+
 Route::get('/user', function() {
     return view('user');
 });
 Route::get('/admin', function() {
     return view('admin');
 });
+Route::resource('/admin','AdminController');
+
 
 Route::resource('/comment','CommentController');
 
 Route::resource('/contact','ContactController');
 
+Route::get('contact',
+    ['as' => 'contact', 'uses' => 'ContactController@create']);
+Route::post('contact',
+    ['as' => 'contact.store', 'uses' => 'ContactController@store']);
 
-Route::get('product/like/{id}', ['as' => 'product.like', 'uses' => 'LikeController@likeProduct']);
-Route::get('post/like/{id}', ['as' => 'post.like', 'uses' => 'LikeController@likePost']);
-
-Route::get('/contact', function() {
-    return view('contact');
-});
-Route::resource('/edit','article.edit');
-
-Route::resource('/admin','AdminController');
