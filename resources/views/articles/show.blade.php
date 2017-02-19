@@ -27,8 +27,8 @@
                                    ])
                             </p> <br>
                             @if(Auth::check() and auth()->user()->isAdmin)
-                                <a href=" {{ route('article.create',$article->id) }}"
-                                   class="btn btn-primary"> Modifier</a>
+                                <a href=" {{ route('article.edit',$article->id) }}"
+                                   class="btn btn-primary">Modifier</a>
                                 <form method="POST" action="{{ route('article.destroy', $article->id) }}">
                                     {{ csrf_field() }}
                                     <input type="hidden" name="_method" value="delete">
@@ -49,7 +49,7 @@
                                     <input type="hidden" name="article_id" value="{{ $article->id }}">
                                     <textarea class="form-control" name="content" placeholder="Commentaire"></textarea>
                                     <div class="panel-heading">
-                                        <input type="submit" value="envoyer" class="btn btn-info">
+                                        <input type="submit" value="Publier" class="btn btn-info">
                                     </div>
                                 </form>
 

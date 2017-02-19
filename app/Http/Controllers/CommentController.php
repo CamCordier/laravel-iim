@@ -114,7 +114,8 @@ class CommentController extends Controller
     {
         $comment = Comment::find($id);
         $comment->delete();
-        return redirect::back()
-            ->with('success', 'Le commentaire a bien été supprimé !');
+
+        return redirect()->route('article.index')
+            ->with('success', 'Le commentaire a bien été supprimé');
     }
 }
